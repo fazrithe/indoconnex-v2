@@ -1,0 +1,1 @@
+var CSRF_HASH = CSRF_JSON;

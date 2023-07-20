@@ -1,0 +1,328 @@
+/*!
+* PT. IMAJIKU CIPTA MEDIA
+* Copyright 2019-2021 IMAJIKU.
+*/
+
+/* =CSS RESET : reset default browser style
+-------------------------------------------------------------*/
+html ,body{
+	background: #ffffff;
+}
+body{
+	overflow-x: hidden;
+}
+
+body {
+	color: #232323;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+figure{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* =HYPERLINK
+------------------------------------------------------------ */
+a{
+	color: #01449f;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+a:link {
+	color: #01449f;
+	text-decoration: none;
+}
+a:visited {
+	color: #01449f;
+	text-decoration: none;
+}
+a:hover {
+	color: #6E87C0;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+a:hover,
+a:active {
+	outline: 0 0;
+}
+a:focus{
+	outline: 0;
+}
+:focus {
+	outline: none;
+}
+
+/* =FONT-FAMILY
+------------------------------------------------------------ */
+
+
+/* =COLOR
+------------------------------------------------------------ */
+.clr-blue{
+	color: #0c1d6b;
+}
+.clr-red{
+	color: #c32c0e;
+}
+
+/*Color background*/
+.bg-clr-blue{
+	background-color: #0c1d6b;
+}
+.bg-clr-red{
+	background-color: #c32c0e;
+}
+.bg-clr-brown{
+	background-color: #A52A2A;
+}
+.bg-clr-orange{
+	background-color: #FFA500;
+}
+.bg-clr-green{
+	background-color: #9ACD32;
+}
+
+/* =TITLE
+-------------------------------------------------------------*/
+.section-title {
+	display: block;
+	position: relative;
+	width: 100%;
+	background-color: #ffffff;
+	padding: 3rem 0 3rem;
+}
+.title-page-box{
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+/*Title Primary*/
+.title-primary {
+	position: relative;
+}
+.title-primary h1 {
+	font-size: 40px;
+	color: #000000;
+	font-weight: 600;
+}
+.title-primary h2 {
+	font-size: 32px;
+	color: #000000;
+	font-weight: 600;
+}
+.title-primary h3 {
+	font-size: 24px;
+	color: #000000;
+	font-weight: 600;
+}
+.title-primary h4 {
+	font-size: 18px;
+	color: #000000;
+	font-weight: 600;
+}
+
+/*Title Secondary*/
+.title-secondary h3 {
+	font-size: 24px;
+	color: #000000;
+	font-weight: 600;
+}
+.title-secondary h4 {
+	font-size: 18px;
+	color: #000000;
+	font-weight: 600;
+}
+
+/*Title Dashboard*/
+.title-dashboard{
+	display: block;
+	position: relative;
+}
+.title-dashboard h3 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+/*Title Component*/
+.title-for-component{
+	font-weight: bold;
+	color: #717070;
+	margin: 20px 0;
+}
+.title-for-component p {
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+/*Title Additional/Title Custom*/
+.lines {
+	position: relative;
+	display: block;
+	margin: 15px auto 15px 0;
+	width: 50px;
+	border-bottom: 2px solid #333333;
+	z-index: 1;
+}
+.text-center .lines {
+	margin: 15px auto;
+}
+.text-right .lines {
+	margin: 15px 0 15px auto;
+}
+.title-primary > p{
+	font-size: 16px;
+	color: #999999;
+}
+.title-primary ul{
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.title-primary li p{
+	margin: 0;
+}
+.title-page-action{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.underline{
+	text-decoration: underline;
+	text-decoration-color: #f98341;
+}
+.strikethrough  {
+	text-decoration: line-through;
+	text-decoration-color: #f98341;
+}
+
+/* =LIST
+------------------------------------------------------------ */
+.list-mjk-unstyled {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	list-style: none;
+}
+.list-mjk-inline {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.list-mjk-inline li:not(:last-child) {
+	margin: 0 10px 10px 0;
+}
+
+.list-style-circle {
+	list-style-type: circle;
+}
+.list-style-square {
+	list-style-type: square;
+}
+.list-style-disc {
+	list-style-type: disc;
+}
+
+/*list with icon*/
+.list-mjk-icon {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.list-mjk-icon-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+.list-mjk-icon-item-img i {
+    font-size: 16px;
+    line-height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+}
+.list-mjk-icon-item p {
+    margin-bottom: 0;
+}
+/*list with icon custom style*/
+.list-style-icon {
+	list-style: none;
+	padding: 0;
+}
+.list-style-icon li {
+	position: relative;
+	padding-left: 25px;
+}
+.list-style-icon li:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	margin-top: 1px;
+	content: "\f144";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	color: #b8784e;
+	min-width: 25px;
+}
+
+/* List table text / form text / data form text */
+.form-text-group-box {
+	position: relative;
+	display: block;
+}
+.form-text-group-box ul {
+	padding: 0;
+	margin-top: 0;
+	list-style: none;
+}
+.form-text-group{
+	margin-bottom: 0;
+}
+.form-text-group .form-text-label{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding-top: calc(.375rem + 1px);
+	padding-bottom: calc(.375rem + 1px);
+	line-height: 1.5;
+}
+.form-text-group .form-text-label label{
+	display: inline-block;
+	margin: 0;
+	line-height: 1.5;
+}
+.form-text-group .form-text-label span{
+	display: inline-block;
+	margin: 0;
+	line-height: 1.5;
+}
+.form-text-group .form-text-desc{
+	padding-top: calc(.375rem + 1px);
+	padding-bottom: calc(.375rem + 1px);
+	line-height: 1.5;
+}
+.form-text-group .form-text-desc p{
+	display: inline-block;
+	margin: 0;
+	line-height: 1.5;
+}
+
+/* =Class Global Variant
+------------------------------------------------------------ */
+/*
+* adalah class untuk mendeskripsikan variant/style dari element.
+* contoh penulisan class varian adalah dibawah ini =
+* .card-mjk.variant-2{}
+*/

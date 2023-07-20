@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /mod_dashboard/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://indoconnex.com/sitemap.xml

@@ -1,0 +1,15 @@
+.contact-us{background-image:url(../images/pages/smiling-telemarketing-asian-woman-working-call-center-office-1.png)}
+.card__image-container {
+	width: 100%;
+	padding-top: 56.25%;
+	overflow: hidden;
+	position: relative;
+  }
+  
+  .card__image-container img {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }

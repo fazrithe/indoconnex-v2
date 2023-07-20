@@ -1,0 +1,142 @@
+<div class="row">
+    <div class="col-md-12">
+        <div id="btn_widget" class="mb-3 text-right">
+        <?php if(PRIVILEGES_ON) {?>
+                <?php $privilege = $this->config->item('privilege'); ?>
+				<a href="#" class="btn btn-md btn-flat bg-green btn_cbx" data-status="2">
+                	<i class="fa fa-check"></i> <span class="hidden-sm hidden-xs">Set Active</span>
+            	</a>
+                <?php if($privilege[1]) { ?>
+                    <a href="#" class="btn btn-md btn-flat btn-primary btn_add">
+                        <i class="fa fa-plus"></i> <span class="hidden-sm hidden-xs">Add</span>
+                    </a>
+                <?php } ?>
+                <?php if($privilege[2]) { ?>
+                    <a href="#" class="btn btn-md btn-flat bg-red btn_cbx" data-status="0">
+                        <i class="fa fa-circle"></i> <span class="hidden-sm hidden-xs">Set Not Active</span>
+                    </a>
+                    <a href="#" class="btn btn-md btn-flat bg-green btn_cbx" data-status="2">
+                        <i class="fa fa-check"></i> <span class="hidden-sm hidden-xs">Set Active</span>
+                    </a>
+                <?php } ?>
+                <?php if($privilege[3]) { ?>
+                    <a href="#" class="btn btn-md btn-flat btn-danger btn_cbd" data-status="2">
+                        <i class="fa fa-trash"></i> <span class="hidden-sm hidden-xs">Delete</span>
+                    </a>
+                <?php } ?>
+            <?php } else { ?>
+				<a href="#" class="btn btn-md btn-flat bg-green" data-status="2" data-toggle="modal" data-target="#exampleModalCenter">
+                	<i class="fa fa-file-excel-o"></i> <span class="hidden-sm hidden-xs">Export</span>
+            	</a>
+                <a href="#" class="btn btn-md btn-flat btn-primary btn_add">
+                    <i class="fa fa-plus"></i> <span class="hidden-sm hidden-xs">Add</span>
+                </a>
+                <a href="#" class="btn btn-md btn-flat bg-red btn_cbx" data-status="0">
+                    <i class="fa fa-circle"></i> <span class="hidden-sm hidden-xs">Set Not Active</span>
+                </a>
+                <a href="#" class="btn btn-md btn-flat bg-green btn_cbx" data-status="2">
+                    <i class="fa fa-check"></i> <span class="hidden-sm hidden-xs">Set Active</span>
+                </a>
+                <a href="#" class="btn btn-md btn-flat btn-danger btn_cbd" data-status="2">
+                    <i class="fa fa-trash"></i> <span class="hidden-sm hidden-xs">Delete</span>
+                </a>
+            <?php } ?>
+            <a href="#" class="btn btn-md btn-flat bg-gray btn_rld">
+                <i class="fa fa-refresh"></i> <span class="hidden-sm hidden-xs">Refresh</span>
+            </a>
+        </div>
+        <div class="box box-solid">
+            <div class="box-header bg-black with-border">
+                <h3 class="box-title">
+                    <i class="fa fa-table"></i>
+                    <?php echo $template_title_module; ?><?php echo ' '; ?><?php echo lang_text('label_table') ?>
+                </h3>
+            </div>
+            <!-- /.box-header -->
+            <div id="filter-table" class="mt-3">
+
+                <div class="form-group">
+                    <label>Show Entries</label>
+                    <select id="filter_length" name="filter_length" class="form-control select2">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                <?php
+                    $input_label       = 'Search by Categories';
+                    $input_placeholder = $input_label;
+                    $input_id          = 'filter_categories';
+                    $input_name        = $input_id;
+                    $input_value       = (!empty($output_result[$input_name])) ? $output_result[$input_name] : '';
+                ?>
+                    <label><?php echo $input_label; ?></label>
+                    <select id="<?php echo $input_id; ?>" name="<?php echo $input_name; ?>" class="form-control select2"></select>
+                </div>
+                <div class="form-group">
+                    <label>Search Keywords</label>
+                    <input type="text" class="form-control" id="filter_search" name="filter_search" value="" placeholder="Search Keywords" />
+                </div>
+
+            </div>
+
+            <div class="box-body">
+                <form id="form-tbl" onsubmit="return false;" method="post">
+                    <input type="hidden" name="<?php echo $CSRF['name']; ?>" value="<?php echo $CSRF['hash']; ?>" />
+                    <table id="data_tables" class="table table-bordered table-striped" style="width:100%">
+                        <thead>
+                            <tr class="bg-gray">
+                                <th width="1%">
+                                    <input name="select_all" value="1" type="checkbox">
+                                </th>
+                                <th width="1%">ID</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th width="10%">Created</th>
+                                <th width="10%">Updated</th>
+								<th width="1%">Page</th>
+                                <th width="1%">Status</th>
+                                <th width="1%" class="text-center">#</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+	<form id="form-action" method="post" action="<?php echo base_url('mod_pbd_business/export') ?>" role="form" enctype="multipart/form-data">
+    <?php echo form_hidden(generate_csrf_nonce($template['partials_module_name'])) ?>
+	<input type="hidden" name="<?php echo $CSRF['name']; ?>" value="<?php echo $CSRF['hash']; ?>"/>  
+	<div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Export Business</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<div class="form-group">
+				<label>Start Date</label>
+				<input type="text" name="start_date" class="form-control datepicker">
+		</div>
+		<div class="form-group">
+				<label>End Date</label>
+				<input type="text" name="end_date" class="form-control datepicker">
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Export</button>
+      </div>
+	</form>
+    </div>
+  </div>
+</div>

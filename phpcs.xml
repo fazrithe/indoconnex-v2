@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="codeigniter">
+	<description>
+		Created with the PHP Coding Standard Generator. http://edorian.github.com/php-coding-standard-generator/
+	</description>
+	<rule ref="Generic.Files.LineEndings" />
+	<rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman" />
+	<rule ref="Generic.PHP.DisallowShortOpenTag" />
+	<rule ref="Generic.PHP.UpperCaseConstant" />
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent" />
+	<rule ref="PEAR.Classes.ClassDeclaration" />
+	<rule ref="PEAR.Functions.ValidDefaultValue" />
+	<rule ref="PEAR.NamingConventions.ValidVariableName" />
+	<rule ref="Squiz.WhiteSpace.CastSpacing" />
+	<rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
+	<rule ref="Squiz.WhiteSpace.ScopeClosingBrace" />
+	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace" />
+	<rule ref="Zend.Files.ClosingTag" />
+</ruleset>

@@ -1,0 +1,53 @@
+﻿/*!
+* PT. IMAJIKU CIPTA MEDIA
+* Copyright 2019-2021 IMAJIKU.
+*
+* import all files
+*
+*/
+
+/*framework bootstrap*/
+@import url("app.css");
+
+/* === begin PLUGIN ==== */
+/*animate*/
+@import url("../plugins/animate/animate.min.css");
+
+/*select2*/
+@import url("select2.css");
+
+/*datepicker dropdown*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css");
+
+.datepicker table tr td.active.highlighted.active,
+.datepicker table tr td.active:active {
+	background-color: #00355e;
+	border-color: #094aac;
+}
+.datepicker table tr td.active.active.focus,
+.datepicker table tr td.active.highlighted.active.focus,
+.datepicker table tr td.active.highlighted.active:hover,
+.datepicker table tr td.active:active:hover {
+	background-color: #094aac;
+	border-color: #002452;
+}
+
+/*daterangepicker*/
+@import url("https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css");
+
+/*fullcalendar*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css");
+
+/*icon flag*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css");
+
+/*Leaflet*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css");
+
+/*AOS*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css");
+
+/* === end PLUGIN ==== */

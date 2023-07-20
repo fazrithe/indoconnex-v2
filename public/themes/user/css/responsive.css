@@ -1,0 +1,80 @@
+/*!
+* PT. IMAJIKU CIPTA MEDIA
+* Copyright 2019-2021 IMAJIKU.
+*/
+
+
+/* Desktop First Design */
+
+/* Larger Devices, Wider Screens */
+@media only screen and (min-width : 1700px) {
+	
+}
+
+@media (min-width : 1500px) and (max-width: 1700px) {
+	
+}
+
+@media only screen and (min-width : 1367px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1200px) {
+	
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media only screen and (min-width : 1024px) {
+	
+}
+
+@media only screen and (max-width : 1024px) {
+
+
+}
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Start mobile responsive */
+@media only screen and (max-width : 991px) {
+
+}
+
+/* Small Devices, Desktops */
+@media only screen and (max-width : 812px) {
+	
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px) {
+	
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 575px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+	
+}
+
+@media only screen and (max-width : 375px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+	
+}

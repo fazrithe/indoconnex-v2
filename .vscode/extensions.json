@@ -1,0 +1,7 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"rexshi.phpdoc-comment-vscode-plugin",
+		"ikappas.phpcs"
+	]
+}
